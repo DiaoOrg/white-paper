@@ -1,4 +1,6 @@
 (() => {
+  // Give the default language a real route so relative Markdown links retain it.
+  if (!location.hash || /^#\/?$/.test(location.hash)) history.replaceState(null, '', '#/en/');
   const published = location.hostname === 'diaoorg.github.io';
   const liveMarkdown = (path, _match, next) => {
     const route = path === '/' ? '/en/' : path;
@@ -38,6 +40,7 @@
   });
   window.$docsify = {
     homepage: 'en/README.md',
+    relativePath: true,
     hideSidebar: true,
     auto2top: true,
     executeScript: false,
