@@ -28,12 +28,13 @@ a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outlin
 .brand { display: flex; align-items: center; gap: 12px; color: var(--ink); text-decoration: none; font-size: 19px; font-weight: 650; letter-spacing: -.5px; min-width: 0; }
 .brand img { flex-shrink: 0; }
 .brand span { line-height: 1.35; }
-.header-tools { display: flex; align-items: center; gap: 24px; }
-.header-tools a { color: var(--ink); text-decoration: none; }
+.header-tools { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
+.header-tools > a, .header-tools > button { display: inline-flex; align-items: center; justify-content: center; flex-shrink: 0; height: 40px; margin: 0; padding: 0; border: 0; border-radius: 6px; background: transparent; color: var(--ink); font: inherit; line-height: 1; text-decoration: none; vertical-align: middle; }
+.header-tools > a:hover, .header-tools > button:hover { background: color-mix(in srgb, var(--ink) 7%, transparent); }
+.header-tools svg { display: block; flex-shrink: 0; width: 20px; height: 20px; }
 .site-header a[href] { text-decoration: none; }
-#language-toggle { font-size: 13px; white-space: nowrap; }
-#theme-toggle { font-size: 24px; width: 36px; height: 40px; padding: 0; color: var(--ink); background: transparent; border: none; border-radius: 5px; cursor: pointer; }
-.github-link { display: grid; place-items: center; min-width: 32px; min-height: 40px; }
+#language-toggle { width: 76px; font-size: 13px; white-space: nowrap; }
+#theme-toggle, .header-tools > .github-link { width: 40px; cursor: pointer; }
 .content { padding-top: 76px; }
 .markdown-section { margin-top: 48px; padding-bottom: 64px; }
 .markdown-section h1 { font-size: 36px; letter-spacing: -1px; line-height: 1.4; }
@@ -46,11 +47,12 @@ main > .content { margin-left: 0 !important; left: 0 !important; }
   .site-header { height: 76px; padding-inline: 16px; gap: 10px; }
   .brand { gap: 9px; font-size: 14px; letter-spacing: 0; }
   .brand img { width: 27px; height: 27px; }
-  .header-tools { gap: 8px; flex-shrink: 0; }
-  #language-toggle { font-size: 12px; }
+  .header-tools { gap: 6px; }
+  #language-toggle { width: 64px; font-size: 12px; }
   .content { padding-top: 76px; }
   .markdown-section { --content-margin-inline: 22px; margin-top: 32px; }
   .markdown-section h1 { font-size: 28px; }
 }
+@media (max-width: 360px) { .brand { font-size: 12px; gap: 7px; } .site-header { padding-inline: 12px; gap: 8px; } .header-tools { gap: 2px; } }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; } }
 @media print { .site-header { display: none; } .content { padding-top: 0; } }
