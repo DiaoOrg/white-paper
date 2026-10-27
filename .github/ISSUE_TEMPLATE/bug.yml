@@ -1,0 +1,20 @@
+name: Bug report / 问题反馈
+description: Report a rendering, translation, or link issue. / 反馈渲染、翻译或链接问题。
+body:
+  - type: input
+    id: url
+    attributes:
+      label: Page URL / 页面地址
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: Expected and actual behavior / 预期与实际表现
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce / 复现步骤
+      description: Include the browser and language. / 请注明浏览器和语言。

@@ -1,0 +1,21 @@
+name: Proposal / 提议
+description: Propose a change or volunteer to contribute. / 提议修改或参与共创。
+body:
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposal / 提议
+      description: Describe the intended change in English and Chinese. / 用中英文说明计划修改的内容。
+    validations:
+      required: true
+  - type: textarea
+    id: files
+    attributes:
+      label: Affected files / 涉及文件
+      description: Include both language paths if applicable. / 如适用，列出中英文路径。
+  - type: checkboxes
+    id: bilingual
+    attributes:
+      label: Contribution / 贡献
+      options:
+        - label: I can maintain both language versions. / 我可以同步维护中英双语。
